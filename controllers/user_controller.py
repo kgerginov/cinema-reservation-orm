@@ -1,9 +1,8 @@
-from sqlalchemy.orm import joinedload
 from database_layer.database import Session
 from database_layer.database import (User,
                                      Reservation)
-from models.validator import CinemaValidator
-from models.utills import hash_pass
+from utills.utills import hash_pass
+from utills.validator import CinemaValidator
 
 
 class UserController:

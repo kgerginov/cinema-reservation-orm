@@ -1,7 +1,9 @@
-from controllers.user_controller import UserController
 from controllers.reservation_controller import ReservationController
-from models.validator import CinemaValidator
-from models.exceptions import (UserAlreadyExists)
+from controllers.user_controller import UserController
+from utills.exceptions import (UserAlreadyExists)
+from utills.validator import CinemaValidator
+
+
 # import getpass
 
 
@@ -41,6 +43,9 @@ class UserInterface:
 
     def make_reservation(self, user_id, proj_id, row, col):
         self.reservation_controller.make_new_reservation(user_id, proj_id, row, col)
+
+    def finalize_reservation(self):
+        self.reservation_controller.finalize_reservation()
 
     def __log_or_register(self, choice):
         if choice == '1':

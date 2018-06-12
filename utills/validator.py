@@ -1,13 +1,15 @@
 import datetime
-from models.utills import hash_pass
+
 from sqlalchemy.orm.exc import NoResultFound
-from settings import (MIN_USERNAME_LENGTH,
-                      MIN_PASS_LENGTH,
-                      SPECIAL_CHARS, MAX_ROWS, MAX_COLS)
-from models.exceptions import *
+
 from database_layer.database import Session
 from database_layer.database import (User, Movie,
                                      Projection, Reservation)
+from settings import (MIN_USERNAME_LENGTH,
+                      MIN_PASS_LENGTH,
+                      SPECIAL_CHARS, MAX_ROWS, MAX_COLS)
+from utills.exceptions import *
+from utills.utills import hash_pass
 
 
 class CinemaValidator:

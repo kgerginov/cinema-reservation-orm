@@ -1,7 +1,7 @@
-from database_layer.database import Session
 from database_layer.database import (Movie,
                                      Projection)
-from models.validator import CinemaValidator
+from database_layer.database import Session
+from utills.validator import CinemaValidator
 
 
 class MovieController:
